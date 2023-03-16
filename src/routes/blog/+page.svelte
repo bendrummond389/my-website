@@ -22,15 +22,37 @@
 		Latest Posts
 	</h2>
 
-	<ul class="grid grid-cols-3 gap-6">
-		{#each data.posts as post}
-			<Card>
-				<div class="grid w-1/2">
-					<a href={`/blog/${post.slug}`}>
-						{post.title}
-					</a>
-				</div>
-			</Card>
-		{/each}
-	</ul>
+	{#each data.posts as post}
+		<div class="card">
+			<a
+				href={`/blog/${post.slug}`}
+				class="card__title"
+			>
+				{post.title}
+			</a>
+			<p class="card__text">{post.text}</p>
+		</div>
+	{/each}
 </main>
+
+<style>
+	.card {
+		max-width: 600px;
+		padding: 1rem;
+		background-color: white;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+		border-radius: 0.5rem;
+		margin: 0 auto 2rem;
+	}
+
+	.card__title {
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin-bottom: 1rem;
+	}
+
+	.card__text {
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+</style>
