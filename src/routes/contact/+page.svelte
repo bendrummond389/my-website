@@ -61,7 +61,7 @@
     <button type="submit">Send Message</button>
 
     {#if showAlert}
-      <div class="mt-4">
+      <div class="mt-5">
         <Alert dismissible on:dismiss={() => (showAlert = false)}>
           Message sent successfully!
         </Alert>
