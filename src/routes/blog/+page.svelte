@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Card } from 'flowbite-svelte';
-	export let data;
+	import type { Data } from './+page';
+
+	export let data: Data;
 </script>
 
 <main class="px-4 py-8">
@@ -22,7 +24,7 @@
 
 	<ul class="grid grid-cols-3 gap-6">
 		{#each data.posts as post}
-			<Card >
+			<Card>
 				<div class="grid w-1/2">
 					<a href={`/blog/${post.slug}`}>
 						{post.title}
@@ -32,5 +34,3 @@
 		{/each}
 	</ul>
 </main>
-
-

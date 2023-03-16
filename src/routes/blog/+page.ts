@@ -11,3 +11,13 @@ export const load = () => {
     posts
   }
 }
+
+export type Post = {
+  title: string;
+  text: string;
+  slug: string;
+};
+
+export type Data = {
+  posts: Post[];
+};
