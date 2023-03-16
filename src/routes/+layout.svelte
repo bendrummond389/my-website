@@ -7,15 +7,15 @@
 		NavLi,
 		NavUl,
 		NavHamburger,
-	} from 'flowbite-svelte'; // Import navbar components from Flowbite-Svelte
-	import { writable } from 'svelte/store'; // Import writable store from Svelte
-	import { page } from '$app/stores'; // Import page store from Svelte
+	} from 'flowbite-svelte';
+	import { writable } from 'svelte/store';
+	import { page } from '$app/stores';
 
 	// Define a type for the currently active navigation item
 	type ActiveNavLi =
 		| ''
-		| 'resume'
 		| 'blog'
+		| 'resume'
 		| 'contact';
 
 	// Create a writable store to hold the currently active navigation item
@@ -35,9 +35,8 @@
 </script>
 
 <!-- Define the navbar component with various navigation links -->
-<Navbar let:hidden let:toggle>
-	<NavBrand href="/">
-		<!-- Branding text -->
+<Navbar let:hidden let:toggle color="dark">
+	<NavBrand>
 		<span
 			class="whitespace-nowrap text-xl font-semibold dark:text-white"
 		>

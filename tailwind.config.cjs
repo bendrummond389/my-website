@@ -5,7 +5,17 @@ const config = {
   ],
 
   theme: {
-    extend: {},
+    theme: {
+      extend: {
+        colors: {
+          primary: "#E53E3E",
+          secondary: "#DDD",
+          background: "#1A202C",
+          surface: "#2D3748",
+          text: "#F7FAFC",
+        },
+      },
+    },
   },
 
   plugins: [
